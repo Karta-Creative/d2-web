@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>D2 Beta - A Movement for Movement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    /* Base styles from existing page */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #151515;
+      color: #ffffff;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    /* New marketing page specific styles */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .logo {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #43DEC2;
+    }
+
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      color: #ffffff;
+    }
+
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .section-content {
+      flex: 1;
+    }
+
+    .section-image {
+      flex: 1;
+    }
+
+    .section-image img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #43DEC2;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      color: #43DEC2;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #999;
+    }
+
+    .cta {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-color: #242526;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background-color: #43DEC2;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      transition: opacity 0.2s;
+    }
+
+    .cta-button:hover {
+      opacity: 0.9;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .section {
+        flex-direction: column !important;
+        text-align: center;
+      }
+      
+      h1 {
+        font-size: 2rem;
+      }
+      
+      .tagline {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <img src="logo.png" alt="D2 Logo" class="logo">
+    <h1>A Movement for Movement: D2 Beta is Here!</h1>
+    <p class="tagline">Active life, awesome loot! Unlock in-game rewards just by walking.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-content">
+      <h2>Step Tracking Made Simple</h2>
+      <p>Track your daily steps straight from your phone or smartwatch. Hit your daily goal, maintain streaks, and spend your activity progress on in-game items.</p>
+    </div>
+    <div class="section-image">
+      <img src="screenshot1.jpg" alt="Home screen with leaderboard">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-content">
+      <h2>Leaderboards & Friends</h2>
+      <p>Compete with your friends and climb the leaderboard. Stay motivated together, because every step brings you closer to awesome loot and bragging rights.</p>
+    </div>
+    <div class="section-image">
+      <img src="screenshot2.jpg" alt="Screen with loot items">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-content">
+      <h2>Connect Your Roblox Account</h2>
+      <p>Sync your Roblox account with D2. Spend your hard-earned steps across growing partner games for unique rewards—unlock powerful Buffs and cool in-game items.</p>
+    </div>
+    <div class="section-image">
+      <img src="screenshot3.jpg" alt="Screen with a list of connected Roblox games">
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Join the Movement</h2>
+    <p>Get invited by a friend or sign up for early access and be part of a new movement for movement!</p>
+    <a href="#signup" class="cta-button">Sign Up</a>
+  </div>
+</body>
+</html>
