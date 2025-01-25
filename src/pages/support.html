@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D2 Health Club – App Support & FAQ</title>
+  <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body>
+  <!-- Include header -->
+  <div id="header"></div>
+
+  <div class="support-content">
+    <h1>App Support & FAQ</h1>
+    
+    <div class="faq-section">
+      <details>
+        <summary>How do I join the D2 Beta?</summary>
+        <div class="answer">
+          Currently, D2 is in a closed beta. You'll need an invite from an existing member, or you can request access by visiting our Join the Beta page. Once approved, you'll receive an invite link to create your account.
+        </div>
+      </details>
+
+      <details>
+        <summary>How does D2 track my steps?</summary>
+        <div class="answer">
+          D2 pulls your daily step count from your mobile device or compatible smartwatch. Simply grant the App permission to read your step data, and D2 will update the leaderboard each day. We only track steps—no other health metrics (like distance or calorie burn).
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I connect my Roblox (or other gaming) account?</summary>
+        <div class="answer">
+          To connect your gaming account, go to Settings in the D2 App and choose Connect Account. Follow the prompts to authenticate with Roblox (or any future supported platforms). We only collect and store your Roblox ID to provide in-game rewards. Your login credentials remain with the respective platform (e.g., Roblox, Apple, Discord).
+        </div>
+      </details>
+
+      <details>
+        <summary>What rewards can I earn in D2?</summary>
+        <div class="answer">
+          D2 offers Loot (in-game items, cosmetics, or currencies) and Buffs (temporary perks in partner games). You can unlock these rewards by hitting your daily step goals and maintaining streaks. Access the Loot page in-app to see what's available and how many steps (or how much D2 Gold) you need to redeem them.
+        </div>
+      </details>
+
+      <details>
+        <summary>Do you store my personal information?</summary>
+        <div class="answer">
+          We only collect your email address to manage your account and your Roblox ID (if connected) for reward verification. We do not collect your full name, phone number, or location data. For more details, please see our <a href="privacy-policy.html">Privacy Policy</a>.
+        </div>
+      </details>
+
+      <details>
+        <summary>Can I request to delete my account or data?</summary>
+        <div class="answer">
+          Yes. If you decide to leave D2, you can request account deletion in the Settings section of the App or by emailing merlin.bergmann@karta.game. Once deleted, your personal data (including step history) will be removed from our systems unless we're required by law to keep it in anonymized form.
+        </div>
+      </details>
+
+      <details>
+        <summary>How do I reset my password or change my email?</summary>
+        <div class="answer">
+          Currently, all authentication is handled through our secure platform (Supabase) or the third party you used to sign in (e.g., Apple, Discord, Roblox). If you need to reset your password, follow the "Forgot Password" link on the login screen. To change your email, contact us at merlin.bergmann@karta.game for assistance.
+        </div>
+      </details>
+
+      <details>
+        <summary>Are there any analytics or location tracking in the App?</summary>
+        <div class="answer">
+          No, we do not currently store device analytics (e.g., IP addresses, screen views) or collect location data. Some anonymous, aggregated data might be shared (e.g., total community steps), but we don't collect any personal usage analytics.
+        </div>
+      </details>
+
+      <details>
+        <summary>How secure is my data?</summary>
+        <div class="answer">
+          We use industry-standard security measures and encryption through our third-party provider, Supabase. Only a limited number of senior technical team members have access to user data. While we strive for top-level security, no method of storage or transfer is 100% foolproof.
+        </div>
+      </details>
+
+      <details>
+        <summary>Who can I contact for further assistance?</summary>
+        <div class="answer">
+          If you have questions or experience any issues, please reach out to us at merlin.bergmann@karta.game. For official data or policy inquiries, check our <a href="privacy-policy.html">Privacy Policy</a> or contact our Data Protection Officer using the details provided there.
+        </div>
+      </details>
+    </div>
+
+    <div class="contact-section">
+      <h2>Need more help?</h2>
+      <p>Email us at merlin.bergmann@karta.game. We're here to support you on your journey with D2—where every step earns you awesome loot!</p>
+      <a href="mailto:merlin.bergmann@karta.game" class="cta-button">Contact Support</a>
+    </div>
+  </div>
+
+  <!-- Include footer -->
+  <div id="footer"></div>
+
+  <script>
+    // Simple component loader
+    fetch('../components/shared/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    fetch('../components/shared/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html> 

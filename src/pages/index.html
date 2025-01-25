@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>D2 Beta - A Movement for Movement</title>
+  <link rel="stylesheet" href="../assets/styles/main.css">
+</head>
+<body>
+  <!-- Include header -->
+  <div id="header"></div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <img src="../assets/images/logo.png" alt="D2 Logo" class="logo">
+    <h1>A Movement for Movement: D2 Beta is Here!</h1>
+    <p class="tagline">Active life, awesome loot! Unlock in-game rewards just by walking.</p>
+    <div class="store-badges">
+      <a href="#" class="store-badge">
+        <img src="../assets/images/appstore.svg" alt="Download on the App Store">
+      </a>
+      <a href="#" class="store-badge">
+        <img src="../assets/images/playstore.svg" alt="Get it on Google Play">
+      </a>
+    </div>
+  </div>
+
+  <!-- Features Sections -->
+  <div class="section">
+    <div class="section-content">
+      <h2>Climb the Leaderboard with Friends</h2>
+      <p>Track your steps, hit daily goals, and stack streaks to show everyone who's boss!</p>
+    </div>
+    <div class="section-image">
+      <img src="../assets/images/storescreen1.jpg" alt="Leaderboard screen showing friend rankings">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-content">
+      <h2>Loot & Buffs</h2>
+      <p>Reach step milestones to earn powerful perks and gear up to conquer your favorite games.</p>
+    </div>
+    <div class="section-image">
+      <img src="../assets/images/storescreen2.jpg" alt="Loot page showing available rewards">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-content">
+      <h2>Integrated Games</h2>
+      <p>Discover the growing number of D2-integrated titles that turn your real-world activity into in-game power-ups.</p>
+    </div>
+    <div class="section-image">
+      <img src="../assets/images/storescreen3.jpg" alt="List of D2-integrated partner games">
+    </div>
+  </div>
+
+  <div class="cta">
+    <h2>Join the Movement</h2>
+    <p>Join the closed beta now to start leveling up your life — and your gameplay. Get in touch for early access today!</p>
+    <a href="mailto:merlin.bergmann@karta.game?subject=I'd like to join the D2 Beta" class="cta-button">Sign Up</a>
+    <div class="store-badges">
+      <a href="#" class="store-badge">
+        <img src="../assets/images/appstore.svg" alt="Download on the App Store">
+      </a>
+      <a href="#" class="store-badge">
+        <img src="../assets/images/playstore.svg" alt="Get it on Google Play">
+      </a>
+    </div>
+  </div>
+
+  <!-- Include footer -->
+  <div id="footer"></div>
+
+  <script>
+    // Simple component loader
+    fetch('../components/shared/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+
+    fetch('../components/shared/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+</body>
+</html> 
