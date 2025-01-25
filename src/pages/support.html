@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>D2 Health Club – App Support & FAQ</title>
-  <link rel="stylesheet" href=".../../src/assets/styles/main.css">
+  <link rel="icon" type="image/png" href="../../src/assets/images/favicon.png">
+  <link rel="stylesheet" href="../../src/assets/styles/main.css">
 </head>
 <body>
   <!-- Include header -->
@@ -97,13 +98,13 @@
 
   <script>
     // Simple component loader
-    fetch('../components/shared/header.html')
+    fetch('../../src/components/shared/header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header').innerHTML = data;
       });
 
-    fetch('../components/shared/footer.html')
+    fetch('../../src/components/shared/footer.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('footer').innerHTML = data;
