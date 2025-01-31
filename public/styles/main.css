@@ -480,4 +480,24 @@ button:disabled {
 .contact-section p {
   color: #999;
   margin-bottom: 1.5rem;
+}
+
+/* Legal content styles */
+.legal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.legal-content h1,
+.legal-content h2,
+.legal-content h3 {
+  color: #43dec2;
+}
+
+.legal-content p,
+.legal-content ul,
+.legal-content li {
+  color: #999;
+  line-height: 1.6;
 } 

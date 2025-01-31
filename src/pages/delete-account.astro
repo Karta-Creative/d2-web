@@ -1,0 +1,99 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout>
+  <div class="legal-content">
+    <h1>How to Delete Your Account and Associated Data</h1>
+
+    <div class="deletion-methods">
+      <h2>Method 1: In-App Deletion (Recommended)</h2>
+      <p>The fastest way to delete your account and all associated data:</p>
+      <ol>
+        <li>Open the D2 Health Club app</li>
+        <li>Go to Settings</li>
+        <li>Tap "Update Profile"</li>
+        <li>Tap "Delete Account"</li>
+        <li>Confirm by tapping "Delete Now"</li>
+      </ol>
+      <p class="note">
+        ⚠️ Once confirmed, your account will be immediately deleted. You will be
+        signed out, and we cannot restore your data afterward.
+      </p>
+
+      <h2>Method 2: Email Request</h2>
+      <p>
+        Alternatively, you can request account deletion by sending an email to <a
+          href="mailto:support@d2health.club">support@d2health.club</a
+        >
+      </p>
+      <p>
+        Our support team will process your request and manually delete your profile
+        and all associated data.
+      </p>
+
+      <div class="info-box">
+        <h3>What gets deleted?</h3>
+        <p>Account deletion permanently removes:</p>
+        <ul>
+          <li>Your user profile</li>
+          <li>Step count history</li>
+          <li>Achievement records</li>
+          <li>Connected gaming accounts</li>
+          <li>All other associated data</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .deletion-methods {
+    margin-top: 2rem;
+  }
+
+  .deletion-methods ol {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    color: #999;
+  }
+
+  .deletion-methods li {
+    margin-bottom: 0.5rem;
+  }
+
+  .note {
+    background: rgba(255, 166, 0, 0.1);
+    padding: 1rem;
+    border-radius: 4px;
+    margin: 1rem 0;
+    color: #ffa600;
+  }
+
+  .info-box {
+    background: rgba(67, 222, 194, 0.1);
+    padding: 1.5rem;
+    border-radius: 4px;
+    margin-top: 2rem;
+  }
+
+  .info-box h3 {
+    color: #43dec2;
+    margin-bottom: 1rem;
+  }
+
+  .info-box ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: #999;
+  }
+
+  a {
+    color: #43dec2;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style> 
