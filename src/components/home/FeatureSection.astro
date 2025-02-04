@@ -1,0 +1,32 @@
+---
+const { title, description, image, alt, reverse = false } = Astro.props;
+---
+
+<div
+    class:list={[
+        "py-16",
+        {
+            "bg-d2-gray-light": reverse,
+        },
+    ]}
+>
+    <div
+        class:list={[
+            "flex flex-col items-center justify-center md:justify-between max-w-7xl mx-auto gap-12 px-8",
+            {
+                "md:flex-row-reverse md:pr-20 md:pl-10": reverse,
+                "md:flex-row md:pl-20 md:pr-10": !reverse,
+            },
+        ]}
+    >
+        <div>
+            <h2 class="text-3xl font-bold text-d2-teal mb-4">{title}</h2>
+            <p class="text-gray-400 text-xl">{description}</p>
+        </div>
+        <img
+            src={image}
+            alt={alt}
+            class="max-w-xs border border-d2-teal rounded-lg"
+        />
+    </div>
+</div>

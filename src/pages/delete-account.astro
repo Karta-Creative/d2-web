@@ -3,39 +3,52 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div class="legal-content">
-    <h1>How to Delete Your Account and Associated Data</h1>
+  <div class="max-w-4xl mx-auto p-8">
+    <h1 class="text-4xl text-[#43dec2] font-bold mb-12">
+      How to Delete Your Account and Associated Data
+    </h1>
 
-    <div class="deletion-methods">
-      <h2>Method 1: In-App Deletion (Recommended)</h2>
-      <p>The fastest way to delete your account and all associated data:</p>
-      <ol>
+    <div class="mt-8">
+      <h2 class="text-3xl text-[#43dec2] font-bold mb-6">
+        Method 1: In-App Deletion (Recommended)
+      </h2>
+      <p class="text-gray-400 mb-4">
+        The fastest way to delete your account and all associated data:
+      </p>
+      <ol class="list-decimal my-6 pl-6 text-gray-400 space-y-3">
         <li>Open the D2 Health Club app</li>
         <li>Go to Settings</li>
         <li>Tap "Update Profile"</li>
         <li>Tap "Delete Account"</li>
         <li>Confirm by tapping "Delete Now"</li>
       </ol>
-      <p class="note">
+      <p class="bg-[#2b1d00] p-4 rounded-md my-6 text-[#ffa600]">
         ⚠️ Once confirmed, your account will be immediately deleted. You will be
         signed out, and we cannot restore your data afterward.
       </p>
 
-      <h2>Method 2: Email Request</h2>
-      <p>
-        Alternatively, you can request account deletion by sending an email to <a
-          href="mailto:support@d2health.club">support@d2health.club</a
+      <h2 class="text-3xl text-[#43dec2] font-bold mb-6">
+        Method 2: Email Request
+      </h2>
+      <p class="text-gray-400">
+        Alternatively, you can request account deletion by sending an email to
+        <a
+          href="mailto:support@d2health.club"
+          class="text-[#43dec2] no-underline hover:underline"
+          >support@d2health.club</a
         >
       </p>
-      <p>
-        Our support team will process your request and manually delete your profile
-        and all associated data.
+      <p class="text-gray-400 mt-4">
+        Our support team will process your request and manually delete your
+        profile and all associated data.
       </p>
 
-      <div class="info-box">
-        <h3>What gets deleted?</h3>
-        <p>Account deletion permanently removes:</p>
-        <ul>
+      <div class="bg-[#1a2422] p-8 rounded-lg mt-12 mb-12">
+        <h2 class="text-[#43dec2] text-2xl font-bold mb-4">
+          What gets deleted?
+        </h2>
+        <p class="text-gray-400 mb-6">Account deletion permanently removes:</p>
+        <ul class="list-disc pl-6 text-gray-400 space-y-3">
           <li>Your user profile</li>
           <li>Step count history</li>
           <li>Achievement records</li>
@@ -46,54 +59,3 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 </Layout>
-
-<style>
-  .deletion-methods {
-    margin-top: 2rem;
-  }
-
-  .deletion-methods ol {
-    margin: 1rem 0;
-    padding-left: 1.5rem;
-    color: #999;
-  }
-
-  .deletion-methods li {
-    margin-bottom: 0.5rem;
-  }
-
-  .note {
-    background: rgba(255, 166, 0, 0.1);
-    padding: 1rem;
-    border-radius: 4px;
-    margin: 1rem 0;
-    color: #ffa600;
-  }
-
-  .info-box {
-    background: rgba(67, 222, 194, 0.1);
-    padding: 1.5rem;
-    border-radius: 4px;
-    margin-top: 2rem;
-  }
-
-  .info-box h3 {
-    color: #43dec2;
-    margin-bottom: 1rem;
-  }
-
-  .info-box ul {
-    list-style: disc;
-    padding-left: 1.5rem;
-    color: #999;
-  }
-
-  a {
-    color: #43dec2;
-    text-decoration: none;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-</style> 

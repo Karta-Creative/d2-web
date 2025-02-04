@@ -1,90 +1,57 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import FeatureSection from "../components/home/FeatureSection.astro";
+import StoreBadges from "../components/StoreBadges.astro";
 ---
 
 <Layout>
-  <div class="hero">
-    <img src="/images/logo.png" alt="D2 Logo" class="logo" />
-    <h1>A Movement for Movement: D2 Health Club is Here!</h1>
-    <p class="tagline">
+  <div class="text-center px-8 pt-16 pb-16 min-h-[50vh] md:h-auto">
+    <img src="/images/logo.png" alt="D2 Logo" class="mx-auto w-32" />
+    <h1 class="text-4xl font-bold text-d2-teal mb-3">
+      A Movement for Movement: D2 Health Club is Here!
+    </h1>
+    <p class="text-xl mb-10">
       Active life, awesome loot! Unlock in-game rewards just by walking.
     </p>
-    <div class="store-badges">
-      <a href="#" class="store-badge">
-        <img src="/images/appstore.svg" alt="Download on the App Store" />
-      </a>
-      <a href="#" class="store-badge">
-        <img src="/images/playstore.svg" alt="Get it on Google Play" />
-      </a>
-    </div>
+    <StoreBadges />
   </div>
 
   <!-- Features Sections -->
-  <div class="section">
-    <div class="section-content">
-      <h2>Climb the Leaderboard with Friends</h2>
-      <p>
-        Track your steps, hit daily goals, and stack streaks to show everyone
-        who's boss!
-      </p>
-    </div>
-    <div class="section-image">
-      <img
-        src="/images/storescreen1.jpg"
-        alt="Leaderboard screen showing friend rankings"
-      />
-    </div>
-  </div>
+  <FeatureSection
+    title="Climb the Leaderboard with Friends"
+    description="Track your steps, hit daily goals, and stack streaks to show everyone who's boss!"
+    image="/images/storescreen1.jpg"
+    alt="Leaderboard screen showing friend rankings"
+  />
 
-  <div class="section">
-    <div class="section-content">
-      <h2>Loot & Buffs</h2>
-      <p>
-        Reach step milestones to earn powerful perks and gear up to conquer your
-        favorite games.
-      </p>
-    </div>
-    <div class="section-image">
-      <img
-        src="/images/storescreen2.jpg"
-        alt="Loot page showing available rewards"
-      />
-    </div>
-  </div>
+  <FeatureSection
+    title="Loot & Buffs"
+    description="Reach step milestones to earn powerful perks and gear up to conquer your favorite games."
+    image="/images/storescreen2.jpg"
+    alt="Leaderboard screen showing friend rankings"
+    reverse
+  />
 
-  <div class="section">
-    <div class="section-content">
-      <h2>Integrated Games</h2>
-      <p>
-        Discover the growing number of D2-integrated titles that turn your
-        real-world activity into in-game power-ups.
-      </p>
-    </div>
-    <div class="section-image">
-      <img
-        src="/images/storescreen3.jpg"
-        alt="List of D2-integrated partner games"
-      />
-    </div>
-  </div>
+  <FeatureSection
+    title="Integrated Games"
+    description="Discover the growing number of D2-integrated titles that turn your real-world activity into in-game power-ups."
+    image="/images/storescreen3.jpg"
+    alt="List of D2-integrated partner games"
+  />
 
-  <div class="cta">
-    <h2>Join the Movement</h2>
-    <p>
+  <div class="bg-d2-gray-light pt-16 px-8 text-center">
+    <h2 class="text-d2-teal text-3xl font-bold mb-4">Join the Movement</h2>
+    <p class="text-gray-400 text-lg mb-4 max-w-lg mx-auto">
       Join D2 Health Club now to start leveling up your life — and your
       gameplay. Get in touch for early access today!
     </p>
     <a
-      href="mailto:merlin.bergmann@karta.game?subject=I'd like to join the D2 Health Club"
-      class="cta-button">Sign Up</a
+      href="mailto:support@d2health.club?subject=I'd like to join the D2 Health Club"
+      class="bg-d2-teal text-d2-gray-dark px-8 py-2 rounded-md font-bold block w-fit mx-auto mb-8 hover:bg-d2-teal/80 transition-colors"
     >
-    <div class="store-badges">
-      <a href="#" class="store-badge">
-        <img src="/images/appstore.svg" alt="Download on the App Store" />
-      </a>
-      <a href="#" class="store-badge">
-        <img src="/images/playstore.svg" alt="Get it on Google Play" />
-      </a>
-    </div>
+      Sign Up
+    </a>
+
+    <StoreBadges />
   </div>
 </Layout>

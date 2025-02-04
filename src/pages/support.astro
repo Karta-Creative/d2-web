@@ -1,122 +1,94 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import FaqItem from "../components/FaqItem.astro";
+
+const faqs = [
+  {
+    question: "How do I join D2?",
+    answer:
+      "D2 is an invite-only platform. You'll need an invite from an existing member or you can request access on our Join the Club page. Once approved, you'll receive an invite link to create your account.",
+  },
+  {
+    question: "How does D2 track my steps?",
+    answer:
+      "D2 syncs with your mobile device or compatible smartwatch to track your daily step count. Grant the app permission to read your step data, and D2 will update your progress on the leaderboard each day.",
+  },
+  {
+    question: "How do I connect my gaming account?",
+    answer:
+      "Go to Settings in the D2 App and select 'Connect Account.' Follow the prompts to authenticate with Roblox or other supported platforms. We only collect and store your gaming account ID to provide in-game rewards.",
+  },
+  {
+    question: "What rewards can I earn in D2?",
+    answer:
+      "D2 offers in-game items, cosmetics, and Buffs (temporary perks in partner games). Unlock these rewards by reaching your daily step goals and maintaining streaks. Visit the Loot page in-app to see available rewards.",
+  },
+  {
+    question: "Do you store my personal information?",
+    answer:
+      "We collect only your email address and gaming account ID for verification and rewards. We do not store your name, phone number, or location data. For more details, visit our Privacy Policy.",
+  },
+  {
+    question: "Can I delete my account and data?",
+    answer:
+      "Yes. You can request account deletion in the Settings section of the app or by emailing support@d2health.club. Once deleted, your data will be removed unless required by law to be retained in anonymized form.",
+  },
+  {
+    question: "How do I reset my password?",
+    answer:
+      "Authentication is handled via Supabase or your chosen login provider (e.g., Apple, Discord, Roblox). Use the 'Forgot Password' link on the login screen to reset your password.",
+  },
+  {
+    question: "Does the app track analytics or location data?",
+    answer:
+      "No, D2 does not collect analytics like screen views or location data. Only anonymized, aggregated data (e.g., total community steps) may be used for insights and improvements.",
+  },
+  {
+    question: "How secure is my data?",
+    answer:
+      "We use industry-standard encryption and security protocols through our database provider, Supabase. Only authorized team members have access to limited user data.",
+  },
+  {
+    question: "Who can I contact for support?",
+    answer:
+      "If you need assistance, email us at support@d2health.club. For privacy concerns, check our Privacy Policy.",
+  },
+];
 ---
 
 <Layout>
-  <div class="support-content">
-    <h1>App Support & FAQ</h1>
+  <div class="max-w-4xl mx-auto p-8">
+    <h1 class="text-4xl text-d2-teal font-bold mb-8">App Support & FAQ</h1>
 
-    <div class="faq-section">
-      <details>
-        <summary>How do I join D2?</summary>
-        <div class="answer">
-          D2 is an invite-only platform. You’ll need an invite from an existing
-          member or you can request access on our Join the Club page. Once
-          approved, you’ll receive an invite link to create your account.
-        </div>
-      </details>
-
-      <details>
-        <summary>How does D2 track my steps?</summary>
-        <div class="answer">
-          D2 syncs with your mobile device or compatible smartwatch to track
-          your daily step count. Grant the app permission to read your step
-          data, and D2 will update your progress on the leaderboard each day.
-        </div>
-      </details>
-
-      <details>
-        <summary>How do I connect my gaming account?</summary>
-        <div class="answer">
-          Go to Settings in the D2 App and select "Connect Account." Follow the
-          prompts to authenticate with Roblox or other supported platforms. We
-          only collect and store your gaming account ID to provide in-game
-          rewards.
-        </div>
-      </details>
-
-      <details>
-        <summary>What rewards can I earn in D2?</summary>
-        <div class="answer">
-          D2 offers in-game items, cosmetics, and Buffs (temporary perks in
-          partner games). Unlock these rewards by reaching your daily step goals
-          and maintaining streaks. Visit the Loot page in-app to see available
-          rewards.
-        </div>
-      </details>
-
-      <details>
-        <summary>Do you store my personal information?</summary>
-        <div class="answer">
-          We collect only your email address and gaming account ID for
-          verification and rewards. We do not store your name, phone number, or
-          location data. For more details, visit our <a
-            href="privacy-policy.html">Privacy Policy</a
-          >.
-        </div>
-      </details>
-
-      <details>
-        <summary>Can I delete my account and data?</summary>
-        <div class="answer">
-          Yes. You can request account deletion in the Settings section of the
-          app or by emailing <a href="mailto:merlin.bergmann@karta.game"
-            >merlin.bergmann@karta.game</a
-          >. Once deleted, your data will be removed unless required by law to
-          be retained in anonymized form.
-        </div>
-      </details>
-
-      <details>
-        <summary>How do I reset my password?</summary>
-        <div class="answer">
-          Authentication is handled via Supabase or your chosen login provider
-          (e.g., Apple, Discord, Roblox). Use the "Forgot Password" link on the
-          login screen to reset your password.
-        </div>
-      </details>
-
-      <details>
-        <summary>Does the app track analytics or location data?</summary>
-        <div class="answer">
-          No, D2 does not collect analytics like screen views or location data.
-          Only anonymized, aggregated data (e.g., total community steps) may be
-          used for insights and improvements.
-        </div>
-      </details>
-
-      <details>
-        <summary>How secure is my data?</summary>
-        <div class="answer">
-          We use industry-standard encryption and security protocols through our
-          database provider, Supabase. Only authorized team members have access
-          to limited user data.
-        </div>
-      </details>
-
-      <details>
-        <summary>Who can I contact for support?</summary>
-        <div class="answer">
-          If you need assistance, email us at <a
-            href="mailto:merlin.bergmann@karta.game"
-            >merlin.bergmann@karta.game</a
-          >. For privacy concerns, check our <a href="privacy-policy.html"
-            >Privacy Policy</a
-          >.
-        </div>
-      </details>
+    <div>
+      {
+        faqs.map((faq) => (
+          <details class="mb-4 bg-[rgba(67,222,194,0.1)] rounded-md overflow-hidden">
+            <summary class="p-4 cursor-pointer text-d2-teal font-bold text-lg hover:bg-[rgba(67,222,194,0.15)]">
+              {faq.question}
+            </summary>
+            <p class="p-4 text-gray-400 leading-relaxed border-t border-[rgba(67,222,194,0.2)]">
+              {faq.answer}
+            </p>
+          </details>
+        ))
+      }
     </div>
+  </div>
 
-    <div class="contact-section">
-      <h2>Need more help?</h2>
-      <p>
-        Email us at <a href="mailto:merlin.bergmann@karta.game"
-          >merlin.bergmann@karta.game</a
-        >. We’re here to support your journey with D2!
-      </p>
-      <a href="mailto:merlin.bergmann@karta.game" class="cta-button"
-        >Contact Support</a
-      >
-    </div>
+  <div
+    class="mt-12 text-center p-8 bg-[rgba(67,222,194,0.1)] lg:max-w-3xl lg:mx-auto lg:mb-8 lg:rounded-md"
+  >
+    <h2 class="text-d2-teal mb-4 text-2xl font-bold">Need more help?</h2>
+    <p class="text-gray-500 mb-8">
+      Email us at <a href="mailto:support@d2health.club" class="text-d2-teal"
+        >support@d2health.club</a
+      >. We're here to support your journey with D2!
+    </p>
+    <a
+      href="mailto:support@d2health.club"
+      class="bg-d2-teal text-d2-gray-dark px-8 py-2 rounded-md font-bold block w-fit mx-auto hover:bg-d2-teal/80 transition-colors"
+      >Contact Support</a
+    >
   </div>
 </Layout>
