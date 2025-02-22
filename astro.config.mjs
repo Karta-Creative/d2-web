@@ -6,5 +6,6 @@ import vercel from '@astrojs/vercel';
 export default defineConfig({
   site: "https://d2health.club",
   output: 'server',
-  adapter: vercel()
+  adapter: vercel(),
+  trailingSlash: 'ignore'
 });
