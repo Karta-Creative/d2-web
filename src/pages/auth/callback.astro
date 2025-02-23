@@ -1,0 +1,24 @@
+---
+import { createClient, type EmailOtpType } from '@supabase/supabase-js';
+
+const supabase = createClient(
+  import.meta.env.PUBLIC_SUPABASE_URL,
+  import.meta.env.PUBLIC_SUPABASE_ANON_KEY
+);
+
+const url = new URL(Astro.request.url);
+const token_hash = url.searchParams.get('token_hash');
+const type = url.searchParams.get('type');
+
+if (token_hash && type) {
+  const { error } = await supabase.auth.verifyOtp({
+    type: type as EmailOtpType,
+    token_hash,
+  });
+  if (!error) {
+    return Astro.redirect('/update-password');
+  }
+}
+
+// If there's an error, redirect to home
+return Astro.redirect('/'); 
