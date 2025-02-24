@@ -7,28 +7,21 @@ const supabase = createClient(
 );
 
 const url = new URL(Astro.request.url);
-const token_hash = url.searchParams.get('token');
-const type = url.searchParams.get('type');
+const hash = url.hash.substring(1); // Remove the # character
+const hashParams = new URLSearchParams(hash);
 
 let debugInfo = {
-  token_hash,
-  type,
+  fullUrl: Astro.request.url,
+  hashParams: Object.fromEntries(hashParams),
+  access_token: hashParams.get('access_token'),
+  refresh_token: hashParams.get('refresh_token'),
+  type: hashParams.get('type'),
   data: null as any,
   error: null as any
 };
 
-if (token_hash && type) {
-  const { data, error } = await supabase.auth.verifyOtp({
-    type: type as EmailOtpType,
-    token_hash,
-  });
-  
-  debugInfo.data = data;
-  debugInfo.error = error;
-  
-  if (!error && data?.session) {
-    return Astro.redirect(`/update-password#access_token=${data.session.access_token}&refresh_token=${data.session.refresh_token}`);
-  }
+if (debugInfo.access_token && debugInfo.refresh_token) {
+  return Astro.redirect(`/update-password#access_token=${debugInfo.access_token}&refresh_token=${debugInfo.refresh_token}`);
 }
 ---
 
