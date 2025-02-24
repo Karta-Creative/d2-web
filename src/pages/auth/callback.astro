@@ -11,14 +11,14 @@ const token_hash = url.searchParams.get('token_hash');
 const type = url.searchParams.get('type');
 
 if (token_hash && type) {
-  const { error } = await supabase.auth.verifyOtp({
+  const { data, error } = await supabase.auth.verifyOtp({
     type: type as EmailOtpType,
     token_hash,
   });
-  if (!error) {
-    return Astro.redirect('/update-password');
+  
+  if (!error && data.session) {
+    return Astro.redirect(`/update-password#access_token=${data.session.access_token}&refresh_token=${data.session.refresh_token}`);
   }
 }
 
-// If there's an error, redirect to home
 return Astro.redirect('/'); 
